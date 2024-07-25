@@ -60,7 +60,7 @@
     `.mapa {
         height: auto;
         overflow: auto;
-        width: 300px;
+        width: 400px;
         padding: 1em;
         border-radius: 15px;
         background-color: white;}`);
@@ -68,10 +68,37 @@
 <script id="js-map">
 document.addEventListener('DOMContentLoaded', () => {
     const options = {
-        color: "var(--secondary)",
-        strokeColor: "#EEE",
-        svgTitle: "Mapa de las zonas afectadas por la inundación",
-        svgDesc: "Ejemplo 2",
+        color: "var(--verde-jade)",
+        strokeColor: "#ddd",
+        strokeWidth: 1,
+        svgTitle: "Argentina afectadas por la inundación",
+        svgDesc: "Esta es la descripción del SVG",
+        provincesTitleAndDesc: [        
+            ["AR-A", "Salta"],
+            ["AR-B", "Buenos Aires"],
+            ["AR-C", "Ciudad Autónoma de Buenos Aires"],
+            ["AR-D", "San Luis"],
+            ["AR-E", "Entre Ríos"],
+            ["AR-F", "La Rioja"],
+            ["AR-G", "Santiago del Estero"],
+            ["AR-H", "Chaco"],
+            ["AR-J", "San Juan"],
+            ["AR-K", "Catamarca"],
+            ["AR-L", "La Pampa"],
+            ["AR-M", "Mendoza"],
+            ["AR-N", "Misiones"],
+            ["AR-P", "Formosa"],
+            ["AR-Q", "Neuquén"],
+            ["AR-R", "Río Negro"],
+            ["AR-S", "Santa Fe"],
+            ["AR-T", "Tucumán"],
+            ["AR-U", "Chubut"],
+            ["AR-V", "Tierra del Fuego, Antártida e Islas del Atlántico Sur"],
+            ["AR-W", "Corrientes"],
+            ["AR-X", "Córdoba"],
+            ["AR-Y", "Jujuy"],
+            ["AR-Z", "Santa Cruz"]
+        ],
     };
 
     const arg = new ArgentinaMap(options);

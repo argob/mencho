@@ -100,7 +100,6 @@ COPIAR DESDE ACÁ…
 
 <!-- SCRIPTS -->
 <script>
-    var map;
 // URL temporal
 const _PONCHOMAP_GEOJSON_PROVINCES = "https://gist.githack.com/agustinbouillet/" 
     + "a5cdf04c6b19ed248aa85b27deaee6a2/raw/"
@@ -153,7 +152,7 @@ fetch_json(_PONCHOMAP_GEOJSON_PROVINCES, {headers: {}}).then(geoProvinces => {
             fit_bounds: false // Hace que los polígonos o markers se ajusten a los límites del mapa
         };
         // Instancia para controlar ponchoMap con filtro por provincias.
-         map = new ponchoMapProvincesCustom(geoProvinces, entries, options);
+        const map = new ponchoMapProvincesCustom(geoProvinces, entries, options);
         map.renderProvinceMap();
         loader.close();
     });
